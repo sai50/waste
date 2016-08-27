@@ -1,19 +1,20 @@
 package com.mycompany.app;
-public class App
-{   
-    public static void main(String[] args) 
-    {
-        String[] strArray = {"abc", "def", "mno", "xyz", "pqr", "xyz", "def"};
  
-        for (int i = 0; i < strArray.length-1; i++)
-        {
-            for (int j = i+1; j < strArray.length; j++)
-            {
-                if( (strArray[i].equals(strArray[j])) && (i != j) )
-                {
-                    System.out.println("Duplicate Element is : "+strArray[j]);
-                }
-            }
+public class App {
+    public static void main(String[] a){
+        try{
+            int i = 10/0;
+        } catch(Exception ex){
+            System.out.println("Inside 1st catch Block");
+        } finally {
+            System.out.println("Inside 1st finally block");
         }
-    }    
+        try{
+            int i = 10/10;
+        } catch(Exception ex){
+            System.out.println("Inside 2nd catch Block");
+        } finally {
+            System.out.println("Inside 2nd finally block");
+        }
+    }
 }
