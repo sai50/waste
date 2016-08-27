@@ -94,6 +94,10 @@ public class App {
             System.out.println("Please supply a path to directory to find duplicate files in.");
             return;
         }
+         if (args.length < 2) {
+            System.out.println("Please supply a path to directory to find duplicate files in.");
+            return;
+        }
         File dir = new File(args[0]);
         if (!dir.isDirectory()) {
             System.out.println("Supplied directory does not exist.");
