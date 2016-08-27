@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.io.File;
+
 
 /*
  * an amalgamation of the memory hungry "find duplicate files" program from here ...
@@ -27,13 +29,6 @@ public class App {
             throw new RuntimeException("cannot initialize SHA-512 hash function", e);
         }
     }
-        try {
-            md = MessageDigest.getInstance("SHA-512");
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException("cannot initialize SHA-512 hash function", e);
-        }
-    }
-
     public static void find(Map<String, List<String>> lists, File directory, boolean leanAlgorithm) throws Exception  {
         String hash;
         for (File child : directory.listFiles()) {
